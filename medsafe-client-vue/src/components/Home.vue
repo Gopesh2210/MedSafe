@@ -33,12 +33,12 @@
         <md-list>
        
           <md-list-item>
-            <md-icon>send</md-icon>
+            <md-icon>account_circle</md-icon>
             <span class="md-list-item-text">Profile</span>
           </md-list-item>
 
           <md-list-item>
-            <md-icon>delete</md-icon>
+            <md-icon>exit_to_app</md-icon>
             <span class="md-list-item-text">Logout</span>
           </md-list-item>
 
@@ -47,8 +47,9 @@
       </md-app-drawer>
 
       <md-app-content>
+          <h2>Feature List</h2>
         <ul>
-          <li v-for="(data,index) in skills" :key="index">{{ index }} . {{data.skill}}</li>
+          <li v-for="(data,index) in features" :key="index">{{data.feature}}</li>
         </ul>
       </md-app-content>
     </md-app>
@@ -61,14 +62,13 @@ export default {
   data() {
     return {
       header: "MedSafe",
-      skills: [
-        { skill: "Vue" },
-        { skill: "React" },
-        { skill: "Angular" },
-        { skill: "Node" },
-        { skill: "MySql" },
-        { skill: "Python" },
-        { skill: "Flask" }
+      features: [
+        { feature: "Profile : Profile Settings" },
+        { feature: "News : Covid Stats" },
+        { feature: "Home : Chat Bot" },
+        { feature: "Feel Good : Feel Good News!" },
+        { feature: "User Authentication" }
+
       ],
       menuVisible: false
     };
